@@ -1,0 +1,206 @@
+//font:
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+:root {
+    --primary: #ff0000;
+    --black: #000;
+    --white: white;
+    --text-color: #fff;
+    --font-family: 'Montserrat', sans-serif;
+    --body-bg: #0f0f0f;
+    --header-height: 8rem;
+    --header-shrink-height: 5rem;
+    --mobile-width: 600px;
+    --tablet-width: 1024px;
+    --border-radius: 30px;
+    --box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    //DefaultLayout:
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+//fucntion:
+@mixin flex($align-item, $justify-content) {
+    display: flex;
+    align-items: $align-item;
+    justify-content: $justify-content;
+}
+
+@mixin overplay {
+    background-color: rgba(#000, 0.6);
+}
+
+//responsive:
+@mixin mobile {
+    @media only screen and (max-width: 600px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media only screen and (max-width: 1024px) {
+        @content;
+    }
+}
+
+.mb-3 {
+    margin-bottom: 3rem;
+}
+.mb-2 {
+    margin-bottom: 2rem;
+}
+.section {
+    padding: 0 2rem;
+}
+.section-header {
+    @include flex(center, space-between);
+}
+
+html {
+    font-size: 100%;
+    @include tablet {
+        font-size: 80%;
+    }
+    @include mobile {
+        font-size: 60%;
+    }
+}
+.App {
+    position: relative;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-weight: 400;
+    background-color: var(--body-bg);
+    text-rendering: optimizeSpeed;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    overflow-y: overlay;
+    @include mobile {
+        margin-bottom: 3rem;
+    }
+}
+
+//scroolbar CSS:
+
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+button,
+input,
+[tabindex] {
+    outline: none;
+    border: none;
+}
+a {
+    color: var(--text-color);
+
+    text-decoration: none;
+}
+@media (hover: hover) {
+    a:hover {
+        color: var(--primary);
+    }
+}
+ul {
+    list-style-type: none;
+}
+li {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+}
+iframe {
+    border: 0;
+}
+.container {
+    min-width: 1660px;
+    margin: auto;
+}
+
+//fonts embeded:
+
+// @font-face {
+//     font-family: ProximaNova;
+//     src: url('/assets/fonts/Proxima-Nova-Regular.woff2');
+//     font-weight: 400;
+// }
+
+//Custom tippy tooltip:
+body {
+    // .tippy-box {
+    //     background-color: rgba(84, 84, 84, 0.92);
+    //     border-radius: 8px;
+    //     font-weight: 500;
+    //     line-height: 2.2rem;
+    //     font-size: 1.6rem;
+    // }
+    // .tippy-arrow {
+    //     color: rgba(84, 84, 84, 0.92);
+    // }
+    // .tippy-box[data-placement^='bottom'] > .tippy-arrow:before {
+    //     top: -8px;
+    // }
+    // .tippy-content {
+    //     padding: 8px 9px;
+    // }
+}
+
+//Pagination:
+.swiper-pagination-bullet {
+    background-color: #fff;
+    opacity: 0.4;
+}
+.swiper-pagination-bullet-active {
+    background-color: var(--primary);
+    opacity: 1;
+}
+
+//modal::
+.ReactModal__Overlay {
+    background-color: rgba(0, 0, 0, 0.75) !important;
+}
+.ReactModal__Content {
+    width: 85% !important;
+    height: 85% !important;
+    background-color: rgba(0, 0, 0, 0.75) !important;
+
+    visibility: scroll;
+    @include mobile {
+        width: 90% !important;
+        height: 50% !important;
+    }
+    @include tablet {
+        width: 90% !important;
+        height: 50% !important;
+    }
+}
+// .ReactModal__Overlay::after {
+//     position: absolute;
+//     content: 'X';
+//     font-size: 1.6rem;
+//     top: 30px;
+//     right: 20px;
+//     z-index: 37123892;
+// }

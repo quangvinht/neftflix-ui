@@ -1,0 +1,36 @@
+@use '../../components/GlobalStyles/GlobalStyles.scss' as *;
+
+.modal {
+    background-color: transparent;
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .modal-close {
+        color: #fff;
+        margin-left: auto;
+        font-size: 1.5rem;
+        cursor: pointer;
+        justify-items: flex-end;
+        border: unset;
+        justify-self: flex-end;
+        &:hover {
+            color: var(--primary);
+        }
+    }
+}
+.modal-content {
+    width: 100%;
+    height: 100%;
+    color: var(--primary);
+    background-color: transparent;
+    justify-content: center;
+    flex: 1;
+    .iframe {
+        width: 100%;
+        height: 100%;
+    }
+}

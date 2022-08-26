@@ -1,0 +1,88 @@
+@use '../../../components/GlobalStyles/GlobalStyles.scss' as *;
+.header {
+    height: var(--header-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: var(--body-bg);
+    transition: height 0.3s ease, background-color 0.3s ease;
+    &.shrink {
+        height: var(--header-shrink-height);
+        background-color: var(--body-bg);
+    }
+}
+.logo {
+    @include flex(center, unset);
+    cursor: pointer;
+}
+.logo-img {
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    @include mobile {
+        width: 30px;
+        height: 30px;
+        margin-right: 3px;
+    }
+}
+.logo-text {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.wrapper {
+    @include flex(center, space-between);
+    height: 100%;
+    padding: 0 5rem;
+    @include mobile {
+        justify-content: center;
+    }
+}
+
+.navbar {
+    @include flex(center, unset);
+
+    li {
+        padding: 5px 0;
+        margin-left: 2rem;
+
+        font-weight: 700;
+        position: relative;
+        font-size: 1.5rem;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            transition: width 0.5s ease;
+            height: 2px;
+            background-color: var(--primary);
+        }
+
+        &.active::after,
+        &:hover::after {
+            width: 100%;
+        }
+    }
+    @include mobile {
+        position: fixed;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+        height: 5rem;
+        width: 100%;
+        background-color: var(--body-bg);
+        padding: 0 2rem;
+        box-shadow: var(--box-shadow);
+        @include flex(center, space-between);
+        li {
+            margin-left: 0;
+        }
+    }
+}
