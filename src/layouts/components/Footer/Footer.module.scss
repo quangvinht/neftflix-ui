@@ -1,0 +1,73 @@
+@use '../../../components/GlobalStyles/GlobalStyles.scss' as *;
+
+.footer {
+    @include flex(center, center);
+    position: relative;
+    padding: 6rem 2rem;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.footer-content {
+    max-width: 1000px;
+}
+.footer-logo {
+    margin: 10px 0;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    img {
+        margin-right: 15px;
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+.footer-menus {
+    display: flex;
+    @include mobile {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 30px;
+    font-style: 1.5rem;
+    font-weight: 600;
+    @include mobile {
+        justify-content: center;
+    }
+    a {
+        margin: 5px 0;
+    }
+}
+
+// .footer-menus {
+//     display: grid;
+//     grid-template-columns: repeat(3, 1fr);
+//     @include mobile {
+//         grid-template-columns: repeat(2, 1fr);
+//     }
+// }
+
+// .menu {
+//     @include flex(flex-start, flex-start);
+//     flex-direction: column;
+//     margin-left: 20px;
+//     margin-right: 20px;
+//     margin-top: 1rem;
+//     font-style: 1.5rem;
+//     font-weight: 600;
+//     a {
+//         margin-top: 1rem;
+//     }
+// }

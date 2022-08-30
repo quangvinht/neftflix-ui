@@ -1,11 +1,12 @@
 import { useState, useEffect, useRef } from 'react';
 import styles from './ModalTrailer.module.scss';
 import classNames from 'classnames/bind';
-import PropTypes from 'prop-types';
-import { act } from 'react-dom/test-utils';
 import { useStore, actions } from '~/store/';
 import Button from '~/components/Button';
-import tmdbApi, { category, movieType, tvType } from '~/api/tmdbApi';
+import tmdbApi, { category } from '~/api/tmdbApi';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleXmark } from '@fortawesome/free-regular-svg-icons';
 
 const cx = classNames.bind(styles);
 
@@ -22,7 +23,6 @@ function ModalTrailer({}) {
     useEffect(() => {
         const handleGetVideo = async () => {
             const videos = await tmdbApi.getVideos(category.movie, state.idTrailer);
-            console.log(videos);
             if (videos.results.length > 0) {
                 const videSrcResult = 'https://www.youtube.com/embed/' + videos.results[0].key;
                 setVideoSrc(videSrcResult);
@@ -38,7 +38,7 @@ function ModalTrailer({}) {
         <div className={cx('modal')}>
             {/* <i className={cx('modal-close', 'bx bx-x')}></i> */}
             <Button outline classname={cx('modal-close')} onClick={closeModal}>
-                X
+                <FontAwesomeIcon icon={faCircleXmark} />
             </Button>
             <div className={cx('modal-content')}>
                 <iframe width="100%" height="100%" src={videoSrc}></iframe>

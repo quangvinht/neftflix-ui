@@ -5,8 +5,8 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
-    background-color: var(--body-bg);
+    z-index: 1000;
+    background-color: transparent;
     transition: height 0.3s ease, background-color 0.3s ease;
     &.shrink {
         height: var(--header-shrink-height);

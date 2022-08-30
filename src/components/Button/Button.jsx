@@ -28,6 +28,8 @@ function Button({ children, classname, small = false, onClick, outline = false, 
 }
 
 Button.propTypes = {
+    small: PropTypes.bool,
+    outline: PropTypes.bool,
     onClick: PropTypes.func,
     classname: PropTypes.string,
     children: PropTypes.node.isRequired,

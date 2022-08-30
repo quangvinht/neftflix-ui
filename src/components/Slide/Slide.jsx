@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { useRef } from 'react';
 import styles from './Slide.module.scss';
 import classNames from 'classnames/bind';
 import PropTypes from 'prop-types';
@@ -7,8 +6,6 @@ import tmdbApi, { category, movieType, tvType } from '~/api/tmdbApi';
 import apiConfig from '~/api';
 import { useNavigate } from 'react-router-dom';
 import Button from '~/components/Button';
-import Modal from '~/components/Modal';
-import ModalContent from '~/components/Modal';
 import { useStore, actions } from '~/store/';
 
 import SwiperCore, { Autoplay, Pagination } from 'swiper';

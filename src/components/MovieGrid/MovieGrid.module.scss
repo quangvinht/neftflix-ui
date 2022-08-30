@@ -1,0 +1,41 @@
+@use '../../components/GlobalStyles/GlobalStyles.scss' as *;
+
+.movie-grid {
+    display: flex;
+    flex-direction: column;
+}
+.movie-grid-items {
+    width: 100%;
+    height: 100%;
+    //dung grid trong dó phần repeat( số phần t3 trên 1 hàng , mỗi phần tử trong hàng đó có kích thước bao nhiu)
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 3rem;
+    @include tablet {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+.loadmore {
+    align-self: center;
+}
+
+.movie-grid-search {
+    width: 40%;
+    align-self: flex-start;
+    display: flex;
+    justify-content: space-between;
+    input {
+        margin-right: 15px;
+        flex: 1;
+    }
+
+    @include tablet {
+        width: 100%;
+        align-self: center;
+    }
+    @include mobile {
+        width: 100%;
+        align-self: center;
+    }
+}

@@ -1,0 +1,122 @@
+@use '../../components/GlobalStyles/GlobalStyles.scss' as *;
+
+.detail {
+    height: 50vh;
+    position: relative;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0%;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background-image: linear-gradient(to top, #0f0f0f, rgba(0, 0, 0, 0));
+    }
+}
+.content {
+    @include flex(flex-start, flex-start);
+    max-width: 1260px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -200px;
+    position: relative;
+    padding: 0 2rem;
+
+    .poster {
+        flex: 1;
+        @include mobile {
+            display: none;
+        }
+    }
+    .poster-img {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-top: 200%;
+        border-radius: var(--border-radius);
+    }
+}
+.infor {
+    width: 70%;
+    padding-left: 2rem;
+    position: relative;
+
+    @include mobile {
+        width: 100%;
+        padding-left: 0;
+    }
+    & > * {
+        margin-bottom: 2rem;
+    }
+}
+
+.title {
+    font-size: 4rem;
+    line-height: 1;
+}
+.genres {
+    span:nth-child(1) {
+        margin-left: 0;
+    }
+    span {
+        margin-left: 0.5rem;
+    }
+    .genre-item {
+        padding: 0.5rem 1.5rem;
+        border: 2px solid white;
+        border-radius: var(--border-radius);
+        font-size: 0.8rem;
+        font-weight: 600;
+        background-color: var(--body-bg);
+    }
+}
+.header-cast {
+    width: 100%;
+}
+.casts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+.cast-item {
+    .cast-img {
+        padding-top: 200px;
+        background-size: cover;
+        margin-bottom: 0.5rem;
+        border-radius: var(--border-radius);
+    }
+}
+
+.video-trailer {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.iframe-video {
+    aspect-ratio: 16/9;
+}
+.video-list {
+    margin-bottom: 3rem;
+}
+.video-title h2 {
+    margin-bottom: 1.5rem;
+}
+.similar {
+    margin: 0 10%;
+    border-radius: var(--border-radius);
+    margin-bottom: 5rem;
+    overflow: hidden;
+}

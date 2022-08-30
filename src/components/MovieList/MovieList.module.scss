@@ -1,0 +1,16 @@
+@use '../../components/GlobalStyles/GlobalStyles.scss' as *;
+
+.movie-list {
+}
+.slide {
+    width: 15%;
+    img {
+        border-radius: var(--border-radius);
+    }
+    @include tablet {
+        width: 30%;
+    }
+    @include mobile {
+        width: 40%;
+    }
+}
