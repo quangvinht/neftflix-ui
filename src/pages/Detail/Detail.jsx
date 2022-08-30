@@ -19,6 +19,7 @@ export default function Detail() {
         const params = {};
         const geVideoDetail = async () => {
             const response = await tmdbApi.detail(category, id, { params: {} });
+            window.scrollTo(0, 0);
             setDetail(response);
         };
 
