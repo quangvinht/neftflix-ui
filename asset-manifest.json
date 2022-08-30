@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/neftflix-ui/static/css/main.733296b2.css",
-    "main.js": "/neftflix-ui/static/js/main.61b3c1f6.js",
+    "main.js": "/neftflix-ui/static/js/main.0c24c8a5.js",
     "static/js/787.4c9d15e8.chunk.js": "/neftflix-ui/static/js/787.4c9d15e8.chunk.js",
     "static/media/footer-bg.jpg": "/neftflix-ui/static/media/footer-bg.67e95f05e76a8cebf7e2.jpg",
     "static/media/tmovie.png": "/neftflix-ui/static/media/tmovie.67797e942e59deb68592.png",
     "index.html": "/neftflix-ui/index.html",
     "main.733296b2.css.map": "/neftflix-ui/static/css/main.733296b2.css.map",
-    "main.61b3c1f6.js.map": "/neftflix-ui/static/js/main.61b3c1f6.js.map",
+    "main.0c24c8a5.js.map": "/neftflix-ui/static/js/main.0c24c8a5.js.map",
     "787.4c9d15e8.chunk.js.map": "/neftflix-ui/static/js/787.4c9d15e8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.733296b2.css",
-    "static/js/main.61b3c1f6.js"
+    "static/js/main.0c24c8a5.js"
   ]
 }
